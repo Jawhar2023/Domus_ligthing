@@ -1,0 +1,23 @@
+# Copy and paste these commands into PowerShell one by one:
+
+# Step 1: Navigate to your project folder
+cd "C:\Users\jawha\OneDrive\Desktop\project-client\domus-client\domus-lumina-main\domus-lumina-main"
+
+# Step 2: Remove lock files (fix OneDrive issue)
+Remove-Item ".git\index.lock" -Force -ErrorAction SilentlyContinue
+Remove-Item ".git\config.lock" -Force -ErrorAction SilentlyContinue
+
+# Step 3: Update remote URL to your new repository
+git remote set-url origin https://github.com/Jawhar2023/Domus_ligthing.git
+
+# Step 4: Add ALL files to git
+git add .
+
+# Step 5: Commit your changes
+git commit -m "first commit"
+
+# Step 6: Make sure branch is named 'main'
+git branch -M main
+
+# Step 7: Push to GitHub
+git push -u origin main
